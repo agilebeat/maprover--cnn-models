@@ -37,8 +37,8 @@ print(device_lib.list_local_devices())
 ##############################################################
 img_width, img_height = 256, 256
 
-train_data_dir = '/home/swilson/PipeLine-02/Data_for_CNN/highway_motorway/TRAIN/'
-validation_data_dir = '/home/swilson/PipeLine-02/Data_for_CNN/highway_motorway/TEST/'
+train_data_dir = '/workspaces/maprover--cnn-models/Data_for_CNN/highway_motorway/TRAIN/'
+validation_data_dir = '/workspaces/maprover--cnn-models/Data_for_CNN/highway_motorway/TEST/'
 
 train_pos_dir = 'train_motorway'
 train_neg_dir = 'train_not_motorway'
@@ -142,6 +142,8 @@ model.fit_generator(train_generator,
 
 
 import tensorflowjs as tfjs
+
+# specify where to save keras/tensorflow model
 tfjs.converters.save_keras_model(model, './tfjs_model')
 
 
